@@ -1,0 +1,27 @@
+  DECLARE myChar, thisChar, nextChar : CHARACTER
+        DECLARE Highest, Count, i, j As INTEGER
+        DECLARE str As STRING
+
+        myChar = ''
+        Highest = 0
+        Count = 0
+        str = ""
+
+        OUTPUT("Enter str: ")
+        INPUT(str) 
+
+        For i = 1 To Len(str)
+            nextChar = Mid(str, i, 1)
+            Count = 0
+            For j = 1 To Len(str)
+                thisChar = Mid(str, j, 1)
+                If thisChar = nextChar Then Count = Count + 1
+            Next
+
+            If Count > Highest Then
+                Highest = Count
+                myChar = nextChar
+            End If
+        Next
+        OUTPUT(myChar & " appeared " & Highest & " number of times.")
+      
