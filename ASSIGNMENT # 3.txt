@@ -1,0 +1,43 @@
+ Dim str1 As String
+        Dim i, m, count, alpha, num, special As Integer
+        Dim thischar, thisnum As String
+        Dim yourchar As String
+        str1 = ""
+        i = 0
+        m = 0
+        count = 0
+        alpha = 0
+        num = 0
+        special = 0
+        yourchar = ""
+        thischar = ""
+        thisnum = "0123456789"
+        Console.WriteLine("enter your string to process")
+        str1 = Console.ReadLine()
+        str1 = LCase(str1)
+        Console.WriteLine("enter your character")
+        yourchar = Console.ReadLine()
+        yourchar = LCase(yourchar)
+        For i = 1 To Len(str1)
+            thischar = Mid(str1, i, 1)
+            For m = 1 To Len(thisnum)
+                If thischar = Mid(thisnum, m, 1) Then
+                    num = num + 1
+                End If
+            Next
+            If thischar = yourchar Then
+                count = count + 1
+            ElseIf thischar >= "a" And thischar <= "z" Then
+                alpha = alpha + 1
+            Else
+                special = special + 1
+
+            End If
+        Next
+        alpha = alpha + count
+        special = special - num
+        Console.WriteLine("number of entered character:" & count)
+        Console.WriteLine("number of alphabets:" & alpha)
+        Console.WriteLine("numbers of digit:" & num)
+        Console.WriteLine("number of special:" & special)
+        Console.ReadKey()
