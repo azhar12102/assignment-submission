@@ -1,0 +1,24 @@
+ DECLARE Str1, Str2 : STRING
+       DECLARE Char1, Char2, Char3 : CHARACTER
+       DECLARE i : INTEGER
+        Str1 = ""
+        Str2 = ""
+        Char1 = ''
+        Char2 = ''
+        Char3 = ''
+        i = 0
+         OUTPUT ("Enter string to process: ")
+        INPUT Str1
+        OUTPUT("Enter character to find from the string: ")
+        INPUT Char1
+        OUTPUT("Enter character to replace in the string: ")
+        INPUT Char3
+        For i = 1 To Len(Str1)
+            Char2 = Mid(Str1, i, 1)
+            If Char1 <> Char2 Then
+                Str2 = Str2 & Char2
+            Else
+                Str2 = Str2 & Char3
+            End If
+        Next
+        OUTPUT("Processed string after replacement is: " & Str2)
