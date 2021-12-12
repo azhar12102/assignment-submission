@@ -1,0 +1,23 @@
+ Dim str1, str2 As String
+        Dim a, b, i As Integer
+        str1 = ""
+        str2 = ""
+        a = 0
+        b = 0
+        i = 0
+        Console.WriteLine("Enter tour string:")
+        str1 = Console.ReadLine()
+        str1 = LCase(str1)
+        For i = 1 To Len(str1)
+            If Mid(str1, i, 3) = "not" Then
+                a = i
+
+            End If
+            If Mid(str1, i, 3) = "bad" Then
+                b = i
+            End If
+
+        Next
+        str2 = Mid(str1, 1, a - 1) & "good" & Mid(str1, b + 3, Len(str1))
+        Console.Write("your could have better said:" & str2)
+        Console.ReadKey()
