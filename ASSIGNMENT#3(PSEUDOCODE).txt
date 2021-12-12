@@ -1,0 +1,43 @@
+ DECLARE str1 : STRING
+        DECLARE i, m, count, alpha, num, special : INTEGER
+        DECLARE thischar, thisnum : STRING
+        Dim yourchar As String
+        str1 = ""
+        i = 0
+        m = 0
+        count = 0
+        alpha = 0
+        num = 0
+        special = 0
+        yourchar = ""
+        thischar = ""
+        thisnum = "0123456789"
+        OUTPUT("enter your string to process")
+        INPUT(str1)
+        str1 = LCase(str1)
+        OUTPUT("enter your character")
+        INPUT(yourchar)
+        yourchar = LCase(yourchar)
+        For i = 1 To Len(str1)
+            thischar = Mid(str1, i, 1)
+            For m = 1 To Len(thisnum)
+                If thischar = Mid(thisnum, m, 1) Then
+                    num = num + 1
+                End If
+            Next
+            If thischar = yourchar Then
+                count = count + 1
+            ElseIf thischar >= "a" And thischar <= "z" Then
+                alpha = alpha + 1
+            Else
+                special = special + 1
+
+            End If
+        Next
+        alpha = alpha + count
+        special = special - num
+        OUTPUT("number of entered character:" & count)
+        OUTPUT("number of alphabets:" & alpha)
+        OUTPUT("numbers of digit:" & num)
+        OUTPUT("number of special:" & special)
+        
