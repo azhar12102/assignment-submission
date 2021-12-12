@@ -1,0 +1,25 @@
+Dim str1, str2 As String
+        Dim fch As Char
+        Dim ch As Char
+        Dim i As Integer
+        str1 = ""
+        str2 = ""
+        fch = ""
+        ch = ""
+        i = 0
+        Console.WriteLine("enter string to process")
+        str1 = Console.ReadLine()
+        fch = Left(str1, 1)
+        str2 = fch
+        For i = 2 To Len(str1)
+            ch = Mid(str1, i, 1)
+            If ch <> fch Then
+                str2 = str2 & ch
+            Else
+                str2 = str2 & "*"
+
+
+            End If
+        Next
+        Console.WriteLine("processed string:" & str2)
+        Console.ReadKey()
