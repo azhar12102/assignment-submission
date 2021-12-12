@@ -1,0 +1,15 @@
+    DECLARE a, b, str1, str2, mergedstr : STRING
+        a = ""
+        b = ""
+        str1 = ""
+        str2 = ""
+        mergedstr = ""
+        OUTPUT("Input your first word:")
+        INPUT(str1) 
+        OUTPUT("Input your second word:")
+        INPUT(str2) 
+        a = Left(str2, 2) & Mid(str1, 3, Len(str1))
+        b = Left(str1, 2) & Mid(str2, 3, Len(str2))
+        mergedstr = a & "" & b
+        OUTPUT("Your new string is:" & mergedstr)
+        
