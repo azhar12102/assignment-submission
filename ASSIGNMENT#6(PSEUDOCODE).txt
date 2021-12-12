@@ -1,0 +1,14 @@
+ DECLARE NOD : INTEGER
+        DECLARE count : INTEGER
+        NOD = 0
+        count = 0
+        OUTPUT("Enter your number of donuts")
+        INPUT(count)
+        If count > 9 Then
+            OUTPUT("number of donuts : many")
+        Else
+            OUTPUT("number of donuts : " & count)
+
+
+        End If
+     
