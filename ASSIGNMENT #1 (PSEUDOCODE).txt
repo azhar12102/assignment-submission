@@ -1,0 +1,23 @@
+       DECLARE str1, alphabets : STRING
+        DECLARE ispangram : BOOLEAN
+        DECLARE i : INTEGER
+        DECLAR char1 : CHARACTER
+        str1 = ""
+        alphabets = 'abcdefghijklmnopgrstuvwxyz'
+        ispangram = True
+        i = 0
+        char1 = ''
+        OUTPUT("enter string to process")
+         INPUT(str1) 
+        str1 = LCase(str1)
+        For i = 1 To Len(alphabets)
+            char1 = Mid(alphabets, i, 1)
+            If LOCATE(str1, char1) = 0 Then ispangram = False
+            If ispangram = False Then Exit For
+        Next i
+        If ispangram = True Then
+            OUTPUT("Enter string is a pangram")
+        Else
+            OUTPUT("Enter string is not a pangram")
+
+        End If
