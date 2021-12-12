@@ -1,0 +1,15 @@
+    Dim a, b, str1, str2, mergedstr As String
+        a = ""
+        b = ""
+        str1 = ""
+        str2 = ""
+        mergedstr = ""
+        Console.WriteLine("Input your first word:")
+        str1 = Console.ReadLine()
+        Console.WriteLine("Input your second word:")
+        str2 = Console.ReadLine()
+        a = Left(str2, 2) & Mid(str1, 3, Len(str1))
+        b = Left(str1, 2) & Mid(str2, 3, Len(str2))
+        mergedstr = a & "" & b
+        Console.WriteLine("Your new string is:" & mergedstr)
+        Console.ReadKey()
