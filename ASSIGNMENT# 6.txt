@@ -1,0 +1,14 @@
+ Dim NOD As Integer
+        Dim count As Integer
+        NOD = 0
+        count = 0
+        Console.WriteLine("Enter your number of donuts")
+        count = Console.ReadLine()
+        If count > 9 Then
+            Console.WriteLine("number of donuts : many")
+        Else
+            Console.WriteLine("number of donuts : " & count)
+
+
+        End If
+        Console.ReadKey()
