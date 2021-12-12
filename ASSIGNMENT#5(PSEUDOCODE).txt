@@ -1,0 +1,22 @@
+  DECLARE Str1 : STRING
+        DECLARE Char1 : CHARACTER
+        DECLARE i, vowelcounter : INTEGER
+        Str1 = ""
+        Char1 = ''
+        i = 0
+        vowelCounter = 0
+        OUTPUT("Enter string to process: ")
+        INPUT(Str1) 
+        For i = 1 To Len(Str1)
+            Char1 = Mid(Str1, i, 1)
+            Char1 = UCase(Char1)
+            If Char1 = "A" Or Char1 = "E" Or _
+                Char1 = "I" Or Char1 = "O" Or _
+                Char1 = "U" Then
+                vowelCounter = vowelCounter + 1
+            End If
+        Next
+        OUTPUT("Vowels in string are: " & vowelCounter)
+
+
+        
