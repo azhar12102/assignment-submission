@@ -1,0 +1,26 @@
+Dim str1, alphabets As String
+        Dim ispangram As Boolean
+        Dim i As Integer
+        Dim char1 As Char
+        str1 = ""
+        alphabets = "abcdefghijklmnopgrstuvwxyz"
+        ispangram = True
+        i = 0
+        char1 = ""
+        Console.WriteLine("enter string to process")
+        str1 = Console.ReadLine()
+        str1 = LCase(str1)
+        For i = 1 To Len(alphabets)
+            char1 = Mid(alphabets, i, 1)
+            If InStr(str1, char1) = 0 Then ispangram = False
+            If ispangram = False Then Exit For
+        Next i
+        If ispangram = True Then
+            Console.WriteLine("Enter string is a pangram")
+        Else
+            Console.WriteLine("Enter string is not a pangram")
+
+        End If
+
+
+        Console.ReadKey()
