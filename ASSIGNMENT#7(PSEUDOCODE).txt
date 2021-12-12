@@ -1,0 +1,9 @@
+
+        DECLARE str1, str2 : STRING
+        str1 = ""
+        str2 = ""
+        OUTPUT("enter your str1")
+        INPUT(str1)
+        str2 = Left(str1, 2) & Right(str1, 2)
+        OUTPUT("your processed string is:" & str2)
+      
