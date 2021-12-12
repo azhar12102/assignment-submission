@@ -1,0 +1,25 @@
+DECLAREstr1, str2 : STRING
+        DECLARE fch As CHARACTER
+        DECLARE ch As CHARACTER
+        DECLARE i As INTEGER
+        str1 = ""
+        str2 = ""
+        fch = ''
+        ch = ''
+        i = 0
+        OUTPUT("enter string to process")
+        INPUT(str1)
+        fch = Left(str1, 1)
+        str2 = fch
+        For i = 2 To Len(str1)
+            ch = Mid(str1, i, 1)
+            If ch <> fch Then
+                str2 = str2 & ch
+            Else
+                str2 = str2 & "*"
+
+
+            End If
+        Next
+        OUTPUT("processed string:" & str2)
+      
