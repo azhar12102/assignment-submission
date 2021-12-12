@@ -1,0 +1,19 @@
+
+Dim str1, str2 As String
+        Dim i As Integer
+        str1 = ""
+        str2 = ""
+        i = 0
+        Console.WriteLine("enter string :")
+        str1 = Console.ReadLine()
+        i = Len(str1)
+        If i > 3 Then
+            If Right(str1, 3) = "ing" Then
+                str1 = str1 & "ly"
+            Else
+                str1 = str1 & "ing"
+            End If
+        End If
+        Console.WriteLine("Final String : " & str1)
+
+        Console.ReadKey()
