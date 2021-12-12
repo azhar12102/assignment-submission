@@ -1,0 +1,19 @@
+
+DECLARE str1, str2 As STRING
+        DECLARE i As INTEGER
+        str1 = ""
+        str2 = ""
+        i = 0
+        OUTPUT("enter string :")
+        INPUT(str1 )
+        i = Len(str1)
+        If i > 3 Then
+            If Right(str1, 3) = "ing" Then
+                str1 = str1 & "ly"
+            Else
+                str1 = str1 & "ing"
+            End If
+        End If
+        OUTPUT("Final String : " & str1)
+
+        
